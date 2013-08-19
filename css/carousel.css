@@ -183,6 +183,7 @@ img {
 }
 .carousel nav ul li {
   display: inline-block;
+  margin: 0 0 0 3px;
 }
 .carousel nav ul li a {
   display: block;

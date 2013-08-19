@@ -8,12 +8,13 @@ Carousel = Backbone.View.extend({
     this.container = this.$el;
     this.itemsContainer = this.$('> ul');
     this.items = this.itemsContainer.find('li');
-    this.controllers = this.$('nav a');
     this.current = 0;
     this.itemsHeight = null;
   },
   render: function() {
-    this.items.hide().eq(this.current).show(10,this.setContainerHeight);
+    this.items.hide().eq(this.current).show(10,this.setContainerHeight);  
+    this.container.prepend("<nav><ul>" + new Array(this.items.length + 1).join('<li><a href="#"></a></li>')+"</ul></nav>");
+    this.controllers = this.$('nav a');
     return this;
   },
   goTo: function(e) {
