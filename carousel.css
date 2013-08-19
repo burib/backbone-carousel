@@ -1,0 +1,211 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body,
+html,
+input,
+textarea,
+form,
+select,
+p {
+  font-family: 'Ubuntu', 'Arial', 'Tahoma', sans-serif;
+  font-weight: 300;
+}
+body,
+html {
+  background-color: #fefefe;
+  color: #2b2b2b;
+  font-size: 1em;
+  line-height: 100%;
+  padding: 5% 0;
+}
+a {
+  color: #ef4653;
+}
+strong {
+  font-weight: 600;
+}
+img {
+  max-width: 100%;
+}
+.cont {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+.two-col section {
+  width: 50%;
+  float: left;
+}
+.cont:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+.carousel nav ul {
+  position: absolute;
+  right: 3%;
+  bottom: 5%;
+  z-index: 20;
+}
+.carousel nav ul li {
+  display: inline-block;
+}
+.carousel nav ul li a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #cacaca;
+}
+.carousel nav ul li a.active,
+.carousel nav ul li a:hover {
+  background-color: #ffffff;
+}
+.carousel > ul {
+  width: 100%;
+}
+.carousel > ul > li {
+  position: absolute;
+  display: none;
+}
+.carousel > ul > li:first-child {
+  display: block;
+}
+.carousel ul li img {
+  max-width: 100%;
+  display: block;
+  border: 0;
+}
