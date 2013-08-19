@@ -4,6 +4,7 @@ Carousel = Backbone.View.extend({
   },
   initialize: function(options) {
     _.bindAll(this);
+    $(window).on('resize', this.setContainerHeight)
     this.container = this.$el;
     this.itemsContainer = this.$('> ul');
     this.items = this.itemsContainer.find('li');
@@ -12,14 +13,11 @@ Carousel = Backbone.View.extend({
     this.itemsHeight = null;
   },
   render: function() {
-    this.items.hide().eq(this.current).show(1,function() {
-      this.itemsHeight = this.items.height();
-      this.itemsContainer.height(this.itemsHeight);
-    }.bind(this));
+    this.items.hide().eq(this.current).show(10,this.setContainerHeight);
     return this;
   },
   goTo: function(e) {
-    console.log( this.items.eq(this.current).height() );
+    e.preventDefault();
     this.items.eq(this.current).fadeOut();
     this.current = this.controllers.index($(e.currentTarget));
     this.items.eq(this.current).fadeIn();
@@ -28,6 +26,11 @@ Carousel = Backbone.View.extend({
     return this;
   },
   pause: function () {
+    return this;
+  },
+  setContainerHeight: function () {
+    this.itemsHeight = this.items.height();
+    this.itemsContainer.height(this.itemsHeight);
     return this;
   }
 });
